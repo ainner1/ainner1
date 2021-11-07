@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>百度一下，你还是不知道</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/baidu.css"><!-- 【../】是返回上一层文件目录 -->
+	<!-- 【./】是在同一个文件的目录下 -->
+	<style type="text/css">
+		*{
+	margin: 0px;
+	padding: 0px;
+}
+/*导航栏*/
+.nav{
+	height: 60px;
+	width: 100%;
+	/*background-color:gold;*/ 
+}
+.nav .left{
+	height: 60px;
+	width:460px;
+	/*background-color:pink;*/ 
+	float: left;
+    text-align: center;
+    line-height:60px;
+    padding-left: 24px;
+}
+.left .list .list-item{
+	float: left;
+	margin-right: 31px;
+	list-style: none;
+    position: relative;
+}
+.list .list-item a{
+	text-decoration: none;
+	color: #222;
+	font-size: 15px;
+}
+ .right .list .list-item{
+	float: left;
+	margin-right:31px;
+	list-style: none;
+	margin-top: 1px;
+}
+.right {
+	float:right; 
+	text-align: center;
+}
+/*搜索框*/
+.search-form .logo{
+       height: 150px;	
+       width: 655px;
+       text-align: center;
+       margin: 10px auto 0px;
+}
+.search-form .logo img{
+	  height: 130px;
+       width: 270px;
+}
+.search-form .fm{
+	width: 660px;
+	height: 45px;
+	margin: 0px auto;
+}
+.search-form .fm .search-text{
+	height:45px;
+	width: 548px;
+	display: inline-block;
+	float: left;
+}
+.search-form .fm .search-text .input{
+	width: 514px;
+	border: 2px solid #c4c7ce;
+	float: left;
+	padding: 13px 16px;
+	border-right: 0px;
+	border-radius: 10px 0px 0px 10px;
+	outline: none;
+}
+.search-form .fm .search-text .input:focus{
+	width: 514px;
+	border: 2px solid #4e6ef2;
+	float: left;
+	padding: 13px 16px;
+	border-right: 0px;
+	border-radius: 10px 0px 0px 10px;
+	outline: none;
+}
+.search-form .fm .btn{
+	color:#fff;
+	background-color: #4e6ef2;
+	border: 1px solid #4e6ef2;
+	width: 108px;
+	height: 45px;
+	float: left;
+	font-weight: 400;
+	border-radius: 0px 10px 10px 0px;
+	font-size: 15px;
+	outline: none;
+
+}
+.search-form .fm .btn:hover{
+	color:#fff;
+	background-color: #4662d9;
+	border: 1px solid #4662d9;
+	width: 108px;
+	height: 45px;
+	float: left;
+	font-weight: 400;
+	border-radius: 0px 10px 10px 0px;
+
+}
+.fm{
+	text-align: center;
+}
+.list .list-item a:hover{
+    color: #4e6ef3;
+}
+.search-form .fm .search-text .input:hover{
+	border: 2px solid #b0a99c;
+}
+/*百度热榜*/
+.hot-search{
+	width: 655px;
+	height: 200px;
+	margin: 50px auto;
+	/*background-color: skyblue;*/
+}
+.hot-search p{
+	width: 100%;
+	height: 20px;
+	/*background-color: pink;*/
+	margin-bottom: 15px;
+}
+.hot-search .lt{
+    float: left;
+    color: #222;
+    font-size: 14px;
+}
+.hot-search .rt{
+    float: right;
+    color: #9195a3;
+    font-size: 14px;
+}
+.hot-search ul{
+	width: 100%;
+	height: 160px;
+}
+.hot-search .hot-search-item {
+	list-style: none;
+	width: 50%;
+	height: 34px;
+	float: left;
+	line-height: 34px;
+}
+.hot-search .rt a:hover{
+    float: right;
+    color: #9195a3;
+    font-size: 14px;
+    color: #4662d9;
+}
+.hot-search .hot-search-item .abc{
+	color: #000000;
+}
+.hot-search .hot-search-item .abc:hover{
+	color: #4e6ef2;
+}
+.hot-search .hot-search-item .rt{
+	color: #000000;
+}
+.hot-search .hot-search-item .rt:hover{
+	color: #4e6ef2;
+}
+.hot-search .hot-search-item a{
+	text-decoration: none;
+	font-size: 14px;
+}
+.hot-search .hot-search-item span{
+	float: left;
+}
+.hot-search .hot-search-item .sdf{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	margin-top: 8px;
+	margin-right: 7px;
+	background-image: url("../img/normal.png");
+/*	background-color: red;*/
+}
+.hot-search .hot-search-item .sdf1{
+	background-image: url("../img/1.png");
+}
+.hot-search .hot-search-item .sdf2{
+	background-image: url("../img/2.png");
+}
+.hot-search .hot-search-item .sdf3{
+	background-image: url("../img/3.png");
+}
+.hot-search .hot-search-item .hot{
+    width: 16px;
+    height: 16px;
+/*    background-image: url("../img/hot.png");*/
+    font-size: 12px;
+    color: white;
+    line-height: 16px;
+    margin-top: 9px;
+    border-radius: 4px;
+    background-color: orange;
+    text-align: center;
+}
+.hot-search .hot-search-item .new{
+    width: 16px;
+    height: 16px;
+/*    background-image: url("../img/new.png");*/
+    font-size: 12px;
+    color: white;
+    line-height: 16px;
+    margin-top: 9px;
+    border-radius: 4px;
+    background-color: #ff455b;
+    text-align: center;
+}
+/*底部*/
+.footer{
+	width: 100%;
+    height:40px;
+    background-color: #fbfbfb;
+    position: fixed;
+    bottom: 0px;
+}
+.footer-lt{
+	width: 554px;
+	height: 40px;
+	float: left;
+}
+/*鼠标碰到底部标签，可以有伪类。碰到有颜色变化*/
+.footer .footer-lt a:hover{
+    color: #222;
+ }
+.footer .footer-lt .lh{
+	float: left;
+	line-height:40px;
+	width: 69px;
+	height:40px;
+	text-align: center; 
+}
+.lh .gray{
+	font-size: 12px;
+	color: #9195a3;
+	text-decoration: none;
+}
+.lh .ab{
+    text-decoration: underline;
+}
+.footer.footer-rt{
+	width: 554px;
+	height: 40px;
+	float: right;
+}
+.footer .footer-rt .lh{
+	float: left;
+	line-height:40px;
+	width: 100px;
+	height:40px;
+	text-align: center; 
+	font-size: 12px;
+	color: #9195a3;
+}
+.footer .footer-rt .a{
+	text-decoration: none;
+}
+.footer .footer-rt .a:hover{
+	color: #222;
+}
+/*侧栏*/
+.more{
+	background-color: #fff;
+	width: 304px;
+	height:223px;
+	box-shadow: 0px 2px 10px 0 rgba(0,0,0,0.15);
+    border-radius: 12px;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    z-index: 99;
+    display: none;
+}
+.more .more-conten{
+	height: 70px;
+	padding-top: 16px;
+}
+.more .more-conten a{
+	height: 70px;
+	width: 76px;
+	float: left;
+}
+.more .more-conten a img{
+	height: 42px;
+	width: 42px;
+	margin: auto;
+	display: block;
+	border: 1px solid rgba(0,0,0,0.03);
+	border-radius: 12px;
+}
+.more .more-conten a span{
+	display: block;
+	margin-top: 3px;
+	height: 30px;
+	line-height: 30px;
+}
+.more .tomore{
+	color: #9195a3;
+}
+	</style>
+</head>
+<body>
+ 
+   <div class="nav">
+   	 <div class="left">
+   		<ul class="list">
+   		  <li class="list-item"><a href="">新闻</a>
+	   	  </li>
+	   	  <li class="list-item"><a href="">hao123</a>
+	   	  </li>
+	   	  <li class="list-item"><a href="">地图</a>
+	   	  </li>
+	   	  <li class="list-item"><a href="">视频</a>
+	   	  </li>
+	   	  <li class="list-item"><a href="">贴吧</a>
+	   	  </li>
+	   	  <li class="list-item"><a href="">学术</a>
+	   	  </li>
+	   	  <li class="list-item"><a href="" class="amore" id="amore">更多</a>
+          <!-- 侧栏 -->
+          <div class="more" id="more">
+
+   <div class="more-conten">
+              <a href="">
+                <img src="img/baiduyun.png">
+                <span>网盘</span>
+              </a>
+              <a href="">
+                <img src="img/zhidao.png">
+                <span>知道</span>
+              </a>
+              <a href="">
+                <img src="img/baike.png">
+                <span>百科</span>
+              </a>
+              <a href="">
+                <img src="img/tupian.png">
+                <span>图片</span>
+              </a>
+            </div>
+
+   <div class="more-conten">
+              <a href="">
+                <img src="img/baobaozhidao.png">
+                <span>宝宝知道</span>
+              </a>
+              <a href="">
+                <img src="img/wenku.png">
+                <span>文库</span>
+              </a>
+              <a href="">
+                <img src="img/jingyan.png">
+                <span>经验</span>
+              </a>
+              <a href="">
+                <img src="img/yinyue.png">
+                <span>音乐</span>
+              </a>
+            </div>
+
+   <div class="tomore">
+              <a href="">查看百度一部分产品</a>
+            </div>
+          </div>
+	   	  </li>
+
+  </ul>
+   </div>
+
+   <div class="right">
+      <ul class="list">
+      	<li class="list-item"><a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner" style="color: red;">抗击疫情
+</a></li>
+      	<li class="list-item"><a href="">设置</a></li>
+      	<li class="list-item" style="background-color: #4e6ef2; width: 48px;height: 24px;border-radius: 7px 7px 7px 7px;"><a href="" style=" color: white;">登录</a></li>
+      </ul>
+    </div>
+    </div>
+        <!-- 中间部分，搜索框 -->
+    <div class="search-form">
+    	<!-- 图片 -->
+    	<div class="logo">
+    		<img src="//www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png">
+    	</div>
+    	<!-- 搜索 -->
+    	<div class="fm">
+    		<form action="https://www.baidu.com/s?">
+    		<span class="search-text">
+    			<input type="" name="wd" class="input">
+    		</span>	
+    		<input type="submit" name="" value="百度亿下" class="btn">
+    		</form>
+    	</div>
+    </div>
+    <!-- 百度热搜 -->
+    <div class="hot-search">
+       <p>
+        <!-- 左边 -->
+         <span class="lt">
+           <a href="">百度热榜</a>
+         </span>
+         <!-- 右边 -->
+         <span class="rt">
+           <a href="">查看更多&gt;&gt;</a>
+         </span>
+       </p>
+
+   <ul>
+         <li class="hot-search-item">
+           <a href="">
+             <span class="sdf sdf1">1</span>
+             <span class="abc">肺炎</span>
+             <span class="hot">热</span>
+           </a>
+         </li>
+          <li class="hot-search-item">
+           <a href="">
+             <span class="sdf">4</span>
+             <span class="abc">华南海鲜市场</span>
+           </a>
+         </li>
+         <li class="hot-search-item">
+           <a href="">
+             <span class="sdf sdf2">2</span>
+             <span class="abc">蝙蝠</span>
+           </a>
+         </li>
+         <li class="hot-search-item">
+           <a href="">
+             <span class="sdf">5</span>
+             <span class="abc">全球灾难</span>
+           </a>
+         </li>
+         <li class="hot-search-item">
+           <a href="">
+             <span class="sdf sdf3">3</span>
+             <span class="abc">2020年千万别去武汉......</span>
+             <span class="new">新</span>
+           </a>
+         </li>
+         <li class="hot-search-item">
+           <a href="">
+             <span class="sdf">6</span>
+             <span class="abc">美国总统</span>
+           </a>
+         </li>
+       </ul>
+    </div>
+    <!-- di bu -->
+    <div class="footer">
+      <!-- zuo bian -->
+      <div class="footer-lt">
+        <p class="lh">
+          <a href="" class="gray">设为首页</a>
+        </p>        <p class="lh">
+          <a href="" class="gray">关于百度</a>
+        </p>        <p class="lh">
+          <a href="" class="gray">aboutbaidu</a>
+        </p>        <p class="lh">
+          <a href="" class="gray"></a>
+        </p>        <p class="lh">
+          <a href="" class="gray">设为首页</a>
+        </p>        <p class="lh">
+          <a href="" class="gray">设为首页</a>
+        </p>        <p class="lh">
+          <a href="" class="gray">设为首页</a>
+        </p>        <p class="lh cv">
+          <a href="" class="gray ab"><b>有奖调研</b></a>
+        </p>
+      </div>
+      <div class="footer-rt">
+      <span class="lh">2018&nbsp;baidu&nbsp;</span>
+      <span class="lh">2018&nbsp;baidu&nbsp;</span> <a href="" class="lh a">2018&nbsp;baidu&nbsp;</a>
+     <span class="lh">2018&nbsp;baidu&nbsp;</span>
+     </div>
+    </div>
+    <script type="text/javascript" src="./js/baidu.js"></script>
+</body>
+</html>

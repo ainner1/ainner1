@@ -1,0 +1,104 @@
+/* This Code Highlighting Theme is based on GitHub Theme */
+@media (prefers-color-scheme: light) {
+.gutter {
+    color: var(--grey);
+    user-select: none;
+}
+
+.highlight .name {
+    color: #22863a;
+}
+
+.highlight .attr, .highlight .meta, .highlight .meta-keyword, .highlight .attribute, .highlight .number, .highlight .selector-class {
+    color: #005cc5
+}
+
+.highlight .string {
+    color: #032f62;
+}
+
+.highlight .symbol {
+    color: #005cc5;
+}
+
+.highlight .selector-tag {
+    color: #22863a;
+}
+
+.highlight .built_in {
+    color: #6f42c1;
+}
+
+.highlight .keyword {
+    color: #d73a49;
+}
+.content{
+    background-color: #99cccc;
+    border: 5px solid #669999;
+    border-radius: 15px;
+}
+.post-list-item .content .title{
+    color: #003333;
+}
+.content .time span{
+    color: #336666;
+}
+.large{
+    text-align: center;
+}
+.nav-items .nav-item:hover{
+    color: #000033;
+    background-color: #cccccc;
+}
+#theme-color-scheme-toggle{
+    color: #99cccc;
+}
+}
+@media (prefers-color-scheme: dark) {
+    .highlight .name {
+        color: #ffffff;
+    }
+    .highlight .attr, .highlight .meta, .highlight .meta-keyword, .highlight .attribute, .highlight .number, .highlight .selector-class {
+        color: #ff0000;
+    }
+    .highlight .string {
+        color: #a5d6ff;
+    }
+    .highlight .symbol {
+        color: #79b8ff;
+    }
+    .highlight .selector-tag {
+        color: #7ee787;
+    }
+    .highlight .built_in {
+        color: #d2a8ff;
+    }
+    .highlight .keyword {
+        color: #ff7b72;
+    }
+    .content{
+    background-color: #FFC0CB;
+    border: 5px solid #FFB6C1;
+    border-radius: 15px;
+    }
+    .highlight .post-list-item .content .title{
+    color: #B03060;
+    }
+    .highlight .content .time span{
+    color: #DB7093;
+    }
+    .highlight .large{
+        text-align: center;
+    }
+    .highlight .nav-items .nav-item:hover{
+        color: #000033;
+        background-color: #cccccc;
+    }
+    .highlight #theme-color-scheme-toggle{
+        color: #99cccc;
+    }
+    .section-title{
+        color: #8B1A1A!important;
+    }
+
+}
